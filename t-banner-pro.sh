@@ -72,7 +72,7 @@ fi
 }
 # note this is only print 7 charecters
 echo "";
-echo -e "\e[1;34m[*] \e[32minstall packages....\e[0m";
+echo -e "\e[1;34m[*] \e[32minstalling packages....\e[0m";
 echo "";
 (apt update -y && apt upgrade -y) &> /dev/null;
 apt install figlet pv ncurses-utils binutils coreutils wget git zsh termux-api procps gawk exa termux-tools -y &> /dev/null;
@@ -84,10 +84,10 @@ if [ -e $PREFIX/share/figlet/poisk-lss.flf ]; then
 else
 wget https://raw.githubusercontent.com/poisk-ls/poisk-lss/master/poisk-lss.flf &> /dev/null;
 sleep 3
-cp poisk-lss.flf $PREFIX/share/figlet/poisk-ls.flf;
+cp poisk-lss.flf $PREFIX/share/figlet/poisk-lss.flf;
 cp ASCII-Shadow.flf $PREFIX/share/figlet/ASCII-Shadow.flf;
 sleep 3
-rm poisk-ls.flf
+rm poisk-lss.flf
 fi
 Termux-Banner-Pro () 
 {
@@ -223,7 +223,7 @@ Follow my Github : [\e[33mpoisk-ls\e[32m]
 1. Oh-my-zsh
 2. Zsh-syntax-highlight (\e[33mplugins\e[01;32m)
 3. Zsh-command-autosuggest (\e[33mplugins\e[01;32m)
-4. Terminal-Header
+4. Terminal-Header-Pro
 5. Custom PS1 prompt ( \e[33mBest one\e[1;32m )
 ✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★
 \033[0m";
