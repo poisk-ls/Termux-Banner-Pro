@@ -9,7 +9,7 @@ spin () {
 
 local pid=$!
 local delay=0.25
-local spinner=( '█■■■■' '■█■■■' '■■█■■' '■■■█■' '■■■■█' )
+local spinner=( '☕︎■■■■' '■☕︎■■■' '■■☕︎■■' '■■■☕︎■' '■■■■☕︎' )
 
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
@@ -97,7 +97,7 @@ Remo773 (2020)
 		
 	menu
 +---------------------------*/
-.......Terminal-Header......
+.......Terminal✯Header......
 +---------------------------*/
 oh-my-zsh users only....
 \033[0m";
@@ -120,7 +120,7 @@ Remo773 (2020)
 
 	menu
 +---------------------------*/
-.......Terminal-Header......
+.......Terminal✯Header......
 +---------------------------*/
 oh-my-zsh users only....
 \033[0m";
