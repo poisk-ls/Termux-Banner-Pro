@@ -9,7 +9,7 @@ spin () {
 
 local pid=$!
 local delay=0.25
-local spinner=( '☕︎■■■■' '■☕︎■■■' '■■☕︎■■' '■■■☕︎■' '■■■■☕︎' )
+local spinner=( '☕︎★★★★' '★☕︎★★★' '★★☕︎★★' '★★★☕︎★' '★★★★☕︎' )
 
 while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
 
@@ -47,7 +47,7 @@ COPY_FILES() {
                 cp .object/color*.* .object/font*.* ~/.termux/;
                 cp .object/ASCII-Shadow.flf $PREFIX/share/figlet/
                 cp .object/termux.properties ~/.termux/
-		cp .banner.sh ~/
+		cp .pro-banner.sh ~/
 		termux-reload-settings
         fi
 	if [[ "$version1" -eq 10 ]] || [[ "$version1" -eq 11 ]]; then
@@ -55,7 +55,7 @@ COPY_FILES() {
 		cp .object/color*.* .object/font*.* ~/.termux/;
 		cp .object/termux.properties ~/.termux/
 		cp .object/ASCII-Shadow.flf $PREFIX/share/figlet/
-		cp .banner.sh ~/
+		cp .pro-banner.sh ~/
 		termux-reload-settings
 	fi
 }
@@ -96,9 +96,9 @@ echo -e "\033[01;32m
 Remo773 (2020)
 		
 	menu
-+---------------------------*/
+★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★
 .......Terminal✯Header......
-+---------------------------*/
+★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★
 oh-my-zsh users only....
 \033[0m";
 ok=0
@@ -119,9 +119,9 @@ echo -e "\033[01;32m
 Remo773 (2020)
 
 	menu
-+---------------------------*/
+★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★
 .......Terminal✯Header......
-+---------------------------*/
+★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★
 oh-my-zsh users only....
 \033[0m";
 	echo ""
@@ -137,11 +137,11 @@ TNAME="$PROC";
 col=$(tput cols)
 echo ;
 #figlet -f ASCII-Shadow "$PROC" | lolcat;
-bash ~/T-Header/.banner.sh ${col} ${TNAME}
+bash ~/Termux-Banner-Pro/.pro-banner.sh ${col} ${TNAME}
 echo "";
-#echo -e '\e[0;35m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[00m';
-#echo -e '\033[1;43;30m### SUBSCRIBE MY YOUTUBE CHANNEL ### \033[0m';
-#echo -e '\e[0;35m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[00m';
+#echo -e '\e[0;35m★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰\e[00m';
+#echo -e '\033[1;43;30m### ᴅᴏɴ`ᴛ ɢɪᴠᴇ ᴜᴘ ### \033[0m';
+#echo -e '\e[0;35m★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰\e[00m';
 echo "";
 echo -e "
 \033[0;31m┌─[\033[1;34m$TNAME\033[1;33m@\033[1;36mtermux\033[0;31m]─[\033[0;32m~${PWD/#"$HOME"}\033[0;31m]
@@ -155,8 +155,8 @@ if [[ ${PROC32} == [Y/y] ]]; then
 		rm $HOME/t-header.txt;
 	fi
 
-	if [ -d $HOME/T-Header ]; then
-	cd $HOME/T-Header
+	if [ -d $HOME/Termux-Banner-Pro ]; then
+	cd $HOME/Termux-Banner-Pro
 	fi
 #if [ -e $HOME/.zshrc ]; then
 #	rm -rf ~/.zshrc
@@ -202,7 +202,7 @@ alias rm='rm -i'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=39'
 ZSH_HIGHLIGHT_STYLES[comment]=fg=226,bold
 cols=\$(tput cols)
-bash ~/.banner.sh \${cols} \${TNAME}
+bash ~/.pro-banner.sh \${cols} \${TNAME}
 EOF
 #fi
 COPY_FILES
@@ -217,15 +217,15 @@ exit
 clear;
 echo -e "\033[31m$(figlet -f Remo773 "T- Header")\e[0m"
 echo -e "\e[1;32m
-+----------------------------------*/
-Remo773 : (\e[33m14.4.2021\e[32m)
+✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★
+Follow my Github : [\e[33mpoisk-ls\e[32m]
 
 1. Oh-my-zsh
 2. Zsh-syntax-highlight (\e[33mplugins\e[01;32m)
 3. Zsh-command-autosuggest (\e[33mplugins\e[01;32m)
 4. Terminal-Header
 5. Custom PS1 prompt ( \e[33mBest one\e[1;32m )
-+----------------------------------*/
+✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★✰★
 \033[0m";
 tput setaf 3;
 read -p  "Do you want to setup this ? (y/n) " PROC33
